@@ -1,5 +1,5 @@
 using System;
-using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -9,24 +9,29 @@ public class Controler : MonoBehaviour {
     [SerializeField] private bool TrainIsGone;
     public NavMeshAgent NavMeshAgent { get; private set; }
     
-
     private void Awake() {
         NavMeshAgent = GetComponent<NavMeshAgent>();
         CurrentState = new Wait(this);
     }
 
     private void Update() {
-        CurrentState.SwitchState(CurrentState.CheckNecessity());
+        if(CurrentState.IsDone) CurrentState.SwitchState(CurrentState.CheckNecessity());
         CurrentState.Do();
     }
-
-    public float CheckPatroilNecessity() {
+    
+    /*public float CheckPatroilNecessity() {
         AnimationCurve PatroilCurve = AnimationCurve.Linear(Passenger.Passengers.Count, 1, 0, 0);
-        return PatroilCurve.Evaluate(Passenger.ControlledPassengers.Count);
+        return PatroilCurve.Evaluate();
+    }*/
+
+    private float CheckGatherNecessity() {
+        foreach (Object obj in Object.FallenObject) {
+            if (obj.TimeGrounded >= 5f) return 1;
+        }
+        return 0;
     }
 
     public float CheckWaitNecessity() {
         return !TrainIsGone ? 1 : 0;
     }
-    
 }
