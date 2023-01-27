@@ -5,17 +5,17 @@ using UnityEngine;
 
 public class Passenger : MonoBehaviour {
     public static List<Passenger> Passengers = new List<Passenger>();
-    public static List<Passenger> ControlledPassengers = new List<Passenger>();
-    public bool IsControlled;
-    public bool IsInRules;
+    [SerializeField] private int FriendshipValue;
+    private List<Passenger> Friends = new List<Passenger>();
 
     private void Awake() {
         Passengers.Add(this);
-        ControlledPassengers.Add(this);
+        foreach (Passenger passenger in Passengers) {
+            if(passenger.FriendshipValue == FriendshipValue) Friends.Add(passenger);
+        }
     }
 
     private void Update() {
-        if (IsControlled) ControlledPassengers.Remove(this);
-        
+
     }
 }

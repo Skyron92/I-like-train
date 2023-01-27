@@ -4,7 +4,7 @@ public class Patroil : ControleurStates {
     public Patroil(Controler context) : base(context) {
     }
 
-    private bool HasReachedDestination;
+    private bool HasReachedDestination => Vector3.Distance(Context.transform.position, SetUpDestination()) <= 0.0001;
     private float X;
     private float Z;
 
@@ -14,6 +14,7 @@ public class Patroil : ControleurStates {
 
     public override void Do() {
         Context.NavMeshAgent.SetDestination(SetUpDestination());
+        IsDone = HasReachedDestination;
     }
 
     public Vector3 SetUpDestination() {
