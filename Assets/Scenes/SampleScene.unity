@@ -12242,12 +12242,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: a01fa864e4090974bab8553e508bc00f, type: 2}
+      objectReference: {fileID: 2100000, guid: 8a6efc53cfde7e04b8d254485fde483b, type: 2}
     - target: {fileID: 4713567801940104160, guid: 79431748efc33484d8d0a935c671c888,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 02e2edc139240c544a86af049f8b3bfa, type: 2}
+      objectReference: {fileID: 2100000, guid: b37aa0a430c0f8c42af6e42024be7b9a, type: 2}
     - target: {fileID: 4890062503632468214, guid: 79431748efc33484d8d0a935c671c888,
         type: 3}
       propertyPath: m_Name
@@ -12317,7 +12317,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: a01fa864e4090974bab8553e508bc00f, type: 2}
+      objectReference: {fileID: 2100000, guid: 8a6efc53cfde7e04b8d254485fde483b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79431748efc33484d8d0a935c671c888, type: 3}
 --- !u!4 &1103198619 stripped
@@ -12326,6 +12326,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1103198618}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1104320763
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1104320764}
+  m_Layer: 0
+  m_Name: Puppets
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1104320764
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104320763}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.97, y: 4.02, z: -0.65}
+  m_LocalScale: {x: 4.4444447, y: 4.4444447, z: 4.347826}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1103198619}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1106891426
 PrefabInstance:
   m_ObjectHideFlags: 0
