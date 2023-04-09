@@ -2788,7 +2788,7 @@ Transform:
   m_GameObject: {fileID: 5358779296831644536}
   m_LocalRotation: {x: -0, y: 0.8676303, z: -0, w: -0.49721003}
   m_LocalPosition: {x: -8.92, y: -0.07499999, z: 2.6}
-  m_LocalScale: {x: 0.253, y: 0.253, z: 0.253}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2600387918827799861}
@@ -2847,13 +2847,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f44f7970d7756947a8ddc6cf21a506e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 7
-  _rotationSpeed: 1000
-  Weight: 1
-  cameraTransform: {fileID: 7815408246163236814}
-  YCameraSensitivity: 2
-  XCameraSensitivity: 4.91
-  yRotationLimit: 88
+  moveSpeed: 5
+  jumpSpeed: 8
+  gravity: 20
+  mouseSensitivity: 2
+  clamp: 45
+  Range: 1
+  image: {fileID: 0}
+  Doors: []
 --- !u!114 &7350945629006752698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2882,7 +2883,7 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1516051754723270179}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: ReadWalk
         m_Mode: 0
