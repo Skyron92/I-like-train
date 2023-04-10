@@ -177,9 +177,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: c0d8ffffccd8ffff2efbffffbe6c00007c6f000080700000967100009a710000
+      m_SelectedIDs: 8a5affff
+      m_LastClickedID: -42358
+      m_ExpandedIDs: 2efbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -513,9 +513,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 52.55423, y: 0.4848647, z: -4.6148076}
+    m_Target: {x: 35.939556, y: -16.146088, z: 25.273354}
     speed: 2
-    m_Value: {x: 52.55423, y: 0.4848647, z: -4.6148076}
+    m_Value: {x: 35.939556, y: -16.146088, z: 25.273354}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -562,13 +562,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.19074976, y: 0.026795374, z: -0.0052090716, w: 0.98126286}
+    m_Target: {x: 0.24730225, y: -0.066503435, z: 0.017016266, w: 0.96650755}
     speed: 2
-    m_Value: {x: 0.19074103, y: 0.028267134, z: -0.0054951697, w: 0.9812179}
+    m_Value: {x: -0.24730225, y: 0.066503435, z: -0.017016266, w: -0.96650755}
   m_Size:
-    m_Target: 5.04618
+    m_Target: 105.083405
     speed: 2
-    m_Value: 4.8288803
+    m_Value: 105.083405
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -687,22 +687,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Giulia/Materials/_props/Supp
+    - Assets/Unity
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 51
   m_LastFolders:
-  - Assets/Giulia/Materials/_props/Supp
+  - Assets/Unity
   m_LastFoldersGridSize: 51
   m_LastProjectPath: C:\Users\giuli\Documents\_FORK\I-like-train
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 150.20001}
-    m_SelectedIDs: 76b20000
-    m_LastClickedID: 45686
-    m_ExpandedIDs: 000000008aae00008cae00008eae000090ae000092ae000094ae000096ae0000f4b10000f6b1000000ca9a3b
+    m_SelectedIDs: 94af0000
+    m_LastClickedID: 44948
+    m_ExpandedIDs: 0000000094ae000096ae000098ae00009aae00009cae00009eae0000a0ae000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -730,7 +730,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000008aae00008cae00008eae000090ae000092ae000094ae000096ae000000ca9a3b
+    m_ExpandedIDs: 0000000094ae000096ae000098ae00009aae00009cae00009eae0000a0ae000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -755,9 +755,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: 8a5affff
+    m_LastClickedInstanceID: -42358
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
