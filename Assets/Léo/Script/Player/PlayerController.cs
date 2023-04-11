@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -12,11 +13,14 @@ public class PlayerController : MonoBehaviour
     public float mouseSensitivity = 2.0f;
     [Range(0, 90)] public float clamp;
 
+    [SerializeField] private GameObject firstWagon;
+    [SerializeField] private GameObject train;
+
     private CharacterController _controller;
     private Vector3 moveDirection = Vector3.zero;
     private float verticalRotation = 0.0f;
     private float horizontalRotation = 0.0f;
-    private Camera _camera;
+    private CinemachineVirtualCamera _camera;
     private Animator _animator;
 
     private bool IsNextToDoor => Doors.Exists(x => Vector3.Distance(transform.position, x.transform.position) <= Range);
@@ -27,7 +31,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        _camera = GetComponentInChildren<Camera>();
+        _camera = GetComponentInChildren<CinemachineVirtualCamera>();
         _controller = GetComponent<CharacterController>();
         _animator = GetComponent<Animator>();
         Cursor.lockState = CursorLockMode.Locked;
@@ -52,6 +56,8 @@ public class PlayerController : MonoBehaviour
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
+        
+        _animator.SetFloat("Horizontal", horizontalInput);
 
         // Calculate the movement direction based on the input axes
         Vector3 forward = transform.forward * verticalInput;
@@ -83,6 +89,15 @@ public class PlayerController : MonoBehaviour
                 image.SetActive(false);
                 return;
             }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("SwitchTrain")) {
+            firstWagon.SetActive(false);
+            train.SetActive(true);
+            train.transform.localPosition = Vector3.zero;
         }
     }
 }
