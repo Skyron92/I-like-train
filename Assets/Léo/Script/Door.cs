@@ -18,7 +18,7 @@ public class Door : MonoBehaviour
         }
 
         if (timer >= 7.5f) {
-            _animator.enabled = false;
+            _animator.SetBool("Open", false);
             timer = 0;
         }
     }

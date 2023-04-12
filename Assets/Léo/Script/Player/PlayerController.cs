@@ -41,15 +41,14 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Walk();
-        if (IsNextToDoor)
-        {
+        if (IsNextToDoor) {
             image.SetActive(true);
             if (Input.GetKey(KeyCode.E)) OpenDoor();
         }
-        else
-        {
+        else {
             image.SetActive(false);
         }
+        Debug.Log(Doors.Count);
     }
 
     void Walk()
@@ -85,15 +84,16 @@ public class PlayerController : MonoBehaviour
     private void OpenDoor() {
         foreach (var door in Doors) {
             if (Vector3.Distance(transform.position, door.transform.position) <= Range) {
-                door.gameObject.GetComponent<Animator>().enabled = true;
+                Animator anim = door.gameObject.GetComponent<Animator>();
+                if(anim.GetBool("Open")) return;
+                anim.SetBool("Open", true);
                 image.SetActive(false);
                 return;
             }
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
+    private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("SwitchTrain")) {
             firstWagon.SetActive(false);
             train.SetActive(true);
